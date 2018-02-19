@@ -11,6 +11,8 @@
 |
 */
 
+Route::resource('monedas', 'MonedasController');
+
 Route::get('/', function () {
     return view('welcome');
 });
