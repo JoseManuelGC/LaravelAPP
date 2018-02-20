@@ -11,7 +11,7 @@
 |
 */
 
-Route::resource('monedas', 'MonedaController');
+Route::resource('coins', 'CoinController');
 
 Route::get('/', function () {
     return view('welcome');

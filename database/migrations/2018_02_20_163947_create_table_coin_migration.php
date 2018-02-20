@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateTableMonedasMigration extends Migration
+class CreateTableCoinMigration extends Migration
 {
     /**
      * Run the migrations.
@@ -13,12 +13,13 @@ class CreateTableMonedasMigration extends Migration
      */
     public function up()
     {
-        Schema::create('monedas', function (Blueprint $table) {
+        Schema::create('coins', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('valor');
-            $table->string('pais');
+            $table->integer('value');
+            $table->string('country');
+            $table->string('period');
             $table->integer('year');
-            $table->string('tipo');
+            $table->string('type');
             $table->timestamps();
         });
     }
@@ -30,6 +31,6 @@ class CreateTableMonedasMigration extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('monedas');
+        Schema::dropIfExists('coins');
     }
 }
