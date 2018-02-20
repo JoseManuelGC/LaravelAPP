@@ -50,10 +50,21 @@ public function create()
 	$coin->period = $request->period;
 	$coin->year = $request->year;
 	$coin->type = $request->type;
-	$coin->year = $request->year;
     $coin->save();
 	$coins = Coin::get();
     return view('coins.index')->with('coins', $coins);
+}
+
+public function destroy($id)
+    {
+    $coin = Coin::find($id);
+    if ($coin->delete()) {
+        session()->flash('status', 'Coin deleted successfully');
+    } else {
+        session()->flash('status', 'Unable to delete coin. Please try again');
+    }
+
+    return back();
 }
 
   

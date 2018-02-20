@@ -5,7 +5,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Monedas</title>
+  <title>Coins</title>
  
   <!-- Custom CSS -->
   @section('styles_laravel')
@@ -30,11 +30,11 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a class="navbar-brand" href="{{url('/monedas')}}">Monedas</a>
+        <a class="navbar-brand" href="{{url('/coin')}}">Coins</a>
       </div>
       <div id="navbar" class="navbar-collapse collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><a class="active" href="{{url('/monedas')}}">Monedas</a></li>
+          <li><a class="active" href="{{url('/coin')}}">Coins</a></li>
         </ul>
       </div>
     </div>

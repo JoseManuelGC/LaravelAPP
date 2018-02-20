@@ -26,6 +26,13 @@
             <td>
                 <a href="{{ route('coins.show', $coin->id) }}" class="btn btn-info">View</a>
                 <a href="{{ route('coins.edit', $coin->id) }}" class="btn btn-success">Edit</a>
+                <form action="{{ route('coins.destroy', $coin->id) }}" method="POST" style="display:inline-block">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+                                        <button class="btn btn-danger">
+                                            <span>Delete</span>
+                                        </button>
+                                    </form>
             </td>
             
         </tr>
