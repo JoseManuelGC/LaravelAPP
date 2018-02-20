@@ -7,6 +7,6 @@ use Illuminate\Database\Eloquent\Model;
 class Moneda extends Model
 {
     protected $table='monedas';
-    protected $primaryKey = 'id';
     protected $fillable =  array('valor', 'pais', 'year', 'tipo');
+    protected $hidden = ['created_at','updated_at'];
 }
