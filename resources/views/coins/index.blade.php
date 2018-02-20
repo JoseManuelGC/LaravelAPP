@@ -31,3 +31,4 @@
         </tr>
     @endforeach
   </tbody>
+  <a href="{{ route('coins.create') }}" class="btn btn-success">Add</a>
