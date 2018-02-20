@@ -22,12 +22,20 @@ class CoinController extends Controller
     $coin = Coin::find($Id);
     return view('coins.show')->with('coin', $coin);
   }
-  public function update(Request $request, $Id)
+  public function edit($Id)
   {
-    return view('coins.update')->with('coins', $coins);
-    $coin = Coin::find($Id);
-    $coin->year = $request->year;
-    $coin->save();
-    $coin = Coin::get();
+  	$coin = Coin::find($Id);
+    return view('coins.update')->with('coin', $coin);
   }
+
+  public function update($id, Request $request)
+{
+	$coin = Coin::find($id);
+	$coin->year = $request->year;
+    $coin->save();
+	$coins = Coin::get();
+    return view('coins.index')->with('coins', $coins);
+}
+
+  
 }

@@ -25,9 +25,9 @@
             <td class="text-center">{{ $coin->type}}</td>
             <td>
                 <a href="{{ route('coins.show', $coin->id) }}" class="btn btn-info">View</a>
+                <a href="{{ route('coins.edit', $coin->id) }}" class="btn btn-success">Edit</a>
             </td>
-            <a href="{{ route('coins.update', $coin->id) }}" class="btn btn-success">Edit</a>
+            
         </tr>
     @endforeach
   </tbody>
-</table>
