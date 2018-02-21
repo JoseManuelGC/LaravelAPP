@@ -1,5 +1,6 @@
 @extends('app')
 @section('content')
+<div class="container-fluid">
 <h1>
   Coin
 </h1>
@@ -16,3 +17,4 @@
 <a href="{{ route('coins.index') }}">Back to index</a>
 <br>
 <a href="{{ route('coins.show', $coin->id) }}">Reload</a>
+</div>

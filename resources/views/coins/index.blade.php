@@ -1,7 +1,8 @@
 @extends('app')
 @section('content')
-<h1 class="text-primary">Coin List</h1>
- 
+
+<div class="container-fluid">
+    <h1 class="text-primary">Coin List</h1>
 <table class="table table-bordered" id="tableCoins">
   <thead>
     <tr>
@@ -38,4 +39,7 @@
         </tr>
     @endforeach
   </tbody>
+</table>
+
   <a href="{{ route('coins.create') }}" class="btn btn-success">Add</a>
+  </div>
